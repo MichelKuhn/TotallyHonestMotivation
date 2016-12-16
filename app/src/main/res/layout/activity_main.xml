@@ -1,30 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#009ACD"
     android:orientation="vertical">
 
-   <ImageView
+    <ImageView
        android:src="@drawable/pic1"
        android:scaleType="centerCrop"
        android:layout_width="wrap_content"
-       android:layout_height="250dp" />
+       android:layout_height="250dp"
+       android:layout_centerInParent="true"
+       android:id="@+id/imageView" />
 
     <TextView
         android:text="Wo ein Wille ist, ist auch ein Steak."
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:textSize="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:id="@+id/textView" />
+        android:background="#AA000000"
+        android:padding="12dp"
+        android:textColor="#ffffffff"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp" />
 
     <Button
         android:text="Motivate Me!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp" />
+
+    <TextView
+        android:text="These pictures and words come from the heart!"
+        android:textStyle="bold"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/button"/>
-</LinearLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp" />
+</RelativeLayout>
