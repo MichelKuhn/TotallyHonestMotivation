@@ -7,11 +7,12 @@
     android:orientation="vertical">
 
     <ImageView
-       android:src="@drawable/pic1"
+       android:src="@drawable/pic2"
        android:scaleType="centerCrop"
        android:layout_width="wrap_content"
        android:layout_height="250dp"
        android:layout_centerInParent="true"
+       android:padding="16dp"
        android:id="@+id/imageView" />
 
     <TextView
@@ -30,7 +31,7 @@
         android:layout_marginBottom="34dp" />
 
     <Button
-        android:text="Motivate Me!"
+        android:text="@string/buttonText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button"
@@ -39,7 +40,7 @@
         android:layout_marginBottom="38dp" />
 
     <TextView
-        android:text="These pictures and words come from the heart!"
+        android:text="@string/instructions"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
