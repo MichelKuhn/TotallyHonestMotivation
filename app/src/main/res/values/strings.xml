@@ -2,4 +2,5 @@
     <string name="app_name">TotallyHonestMotivation</string>
     <string name="instructions">Press the button to get motivated!</string>
     <string name="buttonText">Motivate Me!</string>
+    <string name="quote">test</string>
 </resources>

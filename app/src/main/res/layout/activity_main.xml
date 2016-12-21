@@ -48,7 +48,7 @@
         android:background="#AA000000"
         android:padding="12dp"
         android:textColor="#ffffffff"
-        android:id="@+id/textView"
+        android:id="@+id/quoteView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
