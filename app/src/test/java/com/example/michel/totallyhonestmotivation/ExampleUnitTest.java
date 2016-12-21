@@ -11,7 +11,8 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+    public void quoteGenerator_works() throws Exception {
+        QuoteGenerator testGenerator = new QuoteGenerator();
+        assertEquals("Du bist schick, denn du bist ein Huhn.", testGenerator.generateQuote());
     }
 }
