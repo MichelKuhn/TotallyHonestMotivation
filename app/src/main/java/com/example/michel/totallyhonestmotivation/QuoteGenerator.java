@@ -10,16 +10,25 @@ public class QuoteGenerator {
     private static String ADJECTIVE_PATTERN = "\\[Adjektiv\\]";
     private static String SUBSTANTIV_PATTERN = "\\[Substantiv\\]";
 
-    private static String template = "[Substantiv] ist [Adjektiv], denn du bist ein Mensch.";
-
+    private static ArrayList<String> templates = new ArrayList<String>();
     private static ArrayList<String> adjektive = new ArrayList<String>();
     private static ArrayList<String> substantive = new ArrayList<String>();
 
     public QuoteGenerator() {
+        templates.add("Dein [Substantiv] ist [Adjektiv], denn du bist ein Mensch.");
+        templates.add("Es ist dein [Substantiv].");
         adjektive.add("wundervoll");
         adjektive.add("traumhaft");
+        adjektive.add("besser");
+        adjektive.add("besonders");
         substantive.add("Leben");
         substantive.add("Nebel");
+        substantive.add("Weg");
+        substantive.add("Traum");
+    }
+
+    private static String createTemplate() {
+        return templates.get(new Random().nextInt(templates.size()));
     }
 
     private static String createRandomWord(String type) {
@@ -36,6 +45,6 @@ public class QuoteGenerator {
     }
 
     public String generateQuote() {
-        return replaceWords(template);
+        return replaceWords(createTemplate());
     }
 }
