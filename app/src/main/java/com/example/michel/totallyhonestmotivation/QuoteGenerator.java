@@ -19,7 +19,7 @@ class QuoteGenerator {
         templates = Arrays.asList(context.getResources().getStringArray(R.array.templates));
         adjektive = Arrays.asList(context.getResources().getStringArray(R.array.adjectives));
         substantivesS = Arrays.asList(context.getResources().getStringArray(R.array.substantivesS));
-        substantivesP = Arrays.asList(context.getResources().getStringArray(R.array.substantivesS));
+        substantivesP = Arrays.asList(context.getResources().getStringArray(R.array.substantivesP));
     }
 
     private static String createTemplate() {

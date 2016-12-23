@@ -4,14 +4,22 @@
         <item>@drawable/pic1</item>
         <item>@drawable/pic2</item>
         <item>@drawable/pic3</item>
+        <item>@drawable/pic4</item>
+        <item>@drawable/pic5</item>
+        <item>@drawable/pic6</item>
+        <item>@drawable/pic7</item>
+        <item>@drawable/pic8</item>
     </array>
 
     <string-array name="templates">
-        <item>Life is [Adjektiv], but just follow your [SubstantivS].</item>
-        <item>Is it not [Adjektiv] that you have [SubstantivP].</item>
+        <item>Life is [Adjektiv], so just follow your [SubstantivS].</item>
+        <item>All you need is a [SubstantivS] and some [SubstantivP].</item>
         <item>Your [SubstantivP] are [Adjektiv].</item>
         <item>Believe in your [SubstantivP].</item>
         <item>It is a [Adjektiv] [SubstantivS].</item>
+        <item>There is only one [SubstantivS].</item>
+        <item>Follow your [SubstantivS], because it is [Adjektiv].</item>
+        <item>People are [Adjektiv] and so is your [SubstantivS].</item>
     </string-array>
 
     <string-array name="adjectives">
@@ -23,6 +31,9 @@
         <item>magical</item>
         <item>important</item>
         <item>impressive</item>
+        <item>sweet</item>
+        <item>enchanting</item>
+        <item>perfect</item>
     </string-array>
 
     <string-array name="substantivesS">
@@ -33,6 +44,8 @@
         <item>adventure</item>
         <item>time</item>
         <item>road</item>
+        <item>path</item>
+        <item>freedom</item>
     </string-array>
 
     <string-array name="substantivesP">
@@ -44,5 +57,6 @@
         <item>roads</item>
         <item>beliefs</item>
         <item>surroundings</item>
+        <item>choices</item>
     </string-array>
 </resources>

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#009ACD"
+    android:background="#000000"
     android:orientation="vertical">
 
     <Button
@@ -16,19 +16,8 @@
         android:layout_marginBottom="38dp"
         android:onClick="createQuote"/>
 
-    <TextView
-        android:text="@string/instructions"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_above="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="12dp" />
-
     <ImageView
-       android:src="@drawable/pic2"
+       android:src="@drawable/blank"
        android:scaleType="centerCrop"
        android:layout_width="wrap_content"
        android:layout_height="250dp"
@@ -40,7 +29,7 @@
         android:padding="24dp"/>
 
     <TextView
-        android:text="@string/quote"
+        android:text="@string/instructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
