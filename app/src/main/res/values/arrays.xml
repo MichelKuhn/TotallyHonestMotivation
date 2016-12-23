@@ -6,6 +6,14 @@
         <item>@drawable/pic3</item>
     </array>
 
+    <string-array name="templates">
+        <item>Life is [Adjektiv], but just follow your [SubstantivS].</item>
+        <item>Is it not [Adjektiv] that you have [SubstantivP].</item>
+        <item>Your [SubstantivP] are [Adjektiv].</item>
+        <item>Believe in your [SubstantivP].</item>
+        <item>It is a [Adjektiv] [SubstantivS].</item>
+    </string-array>
+
     <string-array name="adjectives">
         <item>warm</item>
         <item>true</item>
@@ -13,6 +21,8 @@
         <item>special</item>
         <item>extraordinary</item>
         <item>magical</item>
+        <item>important</item>
+        <item>impressive</item>
     </string-array>
 
     <string-array name="substantivesS">
@@ -22,6 +32,7 @@
         <item>journey</item>
         <item>adventure</item>
         <item>time</item>
+        <item>road</item>
     </string-array>
 
     <string-array name="substantivesP">
@@ -31,5 +42,7 @@
         <item>feelings</item>
         <item>friends</item>
         <item>roads</item>
+        <item>beliefs</item>
+        <item>surroundings</item>
     </string-array>
 </resources>

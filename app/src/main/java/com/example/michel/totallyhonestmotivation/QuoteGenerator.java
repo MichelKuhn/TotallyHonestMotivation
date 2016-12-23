@@ -16,8 +16,7 @@ class QuoteGenerator {
     private static List<String> substantivesP = new ArrayList<>();
 
     QuoteGenerator(Context context) {
-        templates.add("Life is [Adjektiv], but just follow your [SubstantivS].");
-        templates.add("Is it not [Adjektiv] that you have [SubstantivP].");
+        templates = Arrays.asList(context.getResources().getStringArray(R.array.templates));
         adjektive = Arrays.asList(context.getResources().getStringArray(R.array.adjectives));
         substantivesS = Arrays.asList(context.getResources().getStringArray(R.array.substantivesS));
         substantivesP = Arrays.asList(context.getResources().getStringArray(R.array.substantivesS));
