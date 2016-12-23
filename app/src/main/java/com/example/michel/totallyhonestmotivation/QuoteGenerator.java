@@ -1,31 +1,26 @@
 package com.example.michel.totallyhonestmotivation;
+import android.content.Context;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 /**
  * Created by michel on 21.12.16.
  */
 
-public class QuoteGenerator {
-    private static String ADJECTIVE_PATTERN = "\\[Adjektiv\\]";
-    private static String SUBSTANTIV_PATTERN = "\\[Substantiv\\]";
+class QuoteGenerator {
+    private static List<String> templates = new ArrayList<>();
+    private static List<String> adjektive = new ArrayList<>();
+    private static List<String> substantivesS = new ArrayList<>();
+    private static List<String> substantivesP = new ArrayList<>();
 
-    private static ArrayList<String> templates = new ArrayList<String>();
-    private static ArrayList<String> adjektive = new ArrayList<String>();
-    private static ArrayList<String> substantive = new ArrayList<String>();
-
-    public QuoteGenerator() {
-        templates.add("Life is [Adjektiv], but just follow your [Substantiv].");
-        templates.add("Is it not [Adjektiv] that you have [Substantiv].");
-        adjektive.add("strange");
-        adjektive.add("wunderful");
-        adjektive.add("extraordinary");
-        adjektive.add("special");
-        substantive.add("life");
-        substantive.add("dreams");
-        substantive.add("way");
-        substantive.add("joy");
-        substantive.add("heart");
+    QuoteGenerator(Context context) {
+        templates.add("Life is [Adjektiv], but just follow your [SubstantivS].");
+        templates.add("Is it not [Adjektiv] that you have [SubstantivP].");
+        adjektive = Arrays.asList(context.getResources().getStringArray(R.array.adjectives));
+        substantivesS = Arrays.asList(context.getResources().getStringArray(R.array.substantivesS));
+        substantivesP = Arrays.asList(context.getResources().getStringArray(R.array.substantivesS));
     }
 
     private static String createTemplate() {
@@ -35,17 +30,19 @@ public class QuoteGenerator {
     private static String createRandomWord(String type) {
         switch (type) {
             case "ADJEKTIV": return adjektive.get(new Random().nextInt(adjektive.size()));
-            case "SUBSTANTIV": return substantive.get(new Random().nextInt(substantive.size()));
-            default: return null;
+            case "SUBSTANTIV_S": return substantivesS.get(new Random().nextInt(substantivesS.size()));
+            case "SUBSTANTIV_P": return substantivesP.get(new Random().nextInt(substantivesP.size()));
+            default: return "BOB";
         }
     }
 
     private static String replaceWords(String quote) {
-        String temp = quote.replaceAll(ADJECTIVE_PATTERN, createRandomWord("ADJEKTIV"));
-        return temp.replaceAll(SUBSTANTIV_PATTERN, createRandomWord("SUBSTANTIV"));
+        String temp = quote.replaceAll("\\[Adjektiv\\]", createRandomWord("ADJEKTIV"));
+        String temp2 = temp.replaceAll("\\[SubstantivP\\]", createRandomWord("SUBSTANTIV_P"));
+        return temp2.replaceAll("\\[SubstantivS\\]", createRandomWord("SUBSTANTIV_S"));
     }
 
-    public String generateQuote() {
+    String generateQuote() {
         return replaceWords(createTemplate());
     }
 }

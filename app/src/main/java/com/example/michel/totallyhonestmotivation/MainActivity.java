@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void createQuote(View view) {
-        QuoteGenerator quoteGenerator = new QuoteGenerator();
+        QuoteGenerator quoteGenerator = new QuoteGenerator(getApplicationContext());
         TextView quoteTextView = (TextView)findViewById(R.id.quoteView);
         quoteTextView.setText(quoteGenerator.generateQuote());
         ImageView quoteImageView = (ImageView) findViewById(R.id.imageView);

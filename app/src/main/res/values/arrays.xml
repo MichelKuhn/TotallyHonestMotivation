@@ -5,4 +5,31 @@
         <item>@drawable/pic2</item>
         <item>@drawable/pic3</item>
     </array>
+
+    <string-array name="adjectives">
+        <item>warm</item>
+        <item>true</item>
+        <item>strange</item>
+        <item>special</item>
+        <item>extraordinary</item>
+        <item>magical</item>
+    </string-array>
+
+    <string-array name="substantivesS">
+        <item>dream</item>
+        <item>life</item>
+        <item>way</item>
+        <item>journey</item>
+        <item>adventure</item>
+        <item>time</item>
+    </string-array>
+
+    <string-array name="substantivesP">
+        <item>dreams</item>
+        <item>hopes</item>
+        <item>goals</item>
+        <item>feelings</item>
+        <item>friends</item>
+        <item>roads</item>
+    </string-array>
 </resources>
