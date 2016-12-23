@@ -15,16 +15,17 @@ public class QuoteGenerator {
     private static ArrayList<String> substantive = new ArrayList<String>();
 
     public QuoteGenerator() {
-        templates.add("Dein [Substantiv] ist [Adjektiv], denn du bist ein Mensch.");
-        templates.add("Es ist dein [Substantiv].");
-        adjektive.add("wundervoll");
-        adjektive.add("traumhaft");
-        adjektive.add("besser");
-        adjektive.add("besonders");
-        substantive.add("Leben");
-        substantive.add("Nebel");
-        substantive.add("Weg");
-        substantive.add("Traum");
+        templates.add("Life is [Adjektiv], but just follow your [Substantiv].");
+        templates.add("Is it not [Adjektiv] that you have [Substantiv].");
+        adjektive.add("strange");
+        adjektive.add("wunderful");
+        adjektive.add("extraordinary");
+        adjektive.add("special");
+        substantive.add("life");
+        substantive.add("dreams");
+        substantive.add("way");
+        substantive.add("joy");
+        substantive.add("heart");
     }
 
     private static String createTemplate() {
