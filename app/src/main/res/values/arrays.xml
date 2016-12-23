@@ -12,14 +12,15 @@
     </array>
 
     <string-array name="templates">
-        <item>Life is [Adjektiv], so just follow your [SubstantivS].</item>
-        <item>All you need is a [SubstantivS] and some [SubstantivP].</item>
-        <item>Your [SubstantivP] are [Adjektiv].</item>
-        <item>Believe in your [SubstantivP].</item>
-        <item>It is a [Adjektiv] [SubstantivS].</item>
-        <item>There is only one [SubstantivS].</item>
-        <item>Follow your [SubstantivS], because it is [Adjektiv].</item>
-        <item>People are [Adjektiv] and so is your [SubstantivS].</item>
+        <item>[SubstantivP] are [Adjektiv], so go [Verb] your [SubstantivS]</item>
+        <item>all you need is a [SubstantivS] and some [SubstantivP]</item>
+        <item>your [SubstantivP] are [Adjektiv]</item>
+        <item>[Verb] your [SubstantivP]</item>
+        <item>it is a [Adjektiv] [SubstantivS]</item>
+        <item>there is only one [SubstantivS]</item>
+        <item>[Verb] your [SubstantivS], because it is [Adjektiv]</item>
+        <item>people are [Adjektiv] and so is your [SubstantivS]</item>
+        <item>to [Verb] your [SubstantivP] is [Adjektiv]</item>
     </string-array>
 
     <string-array name="adjectives">
@@ -34,6 +35,20 @@
         <item>sweet</item>
         <item>enchanting</item>
         <item>perfect</item>
+        <item>bright</item>
+    </string-array>
+
+    <string-array name="verbs">
+        <item>follow</item>
+        <item>chase</item>
+        <item>live</item>
+        <item>look at</item>
+        <item>find</item>
+        <item>run after</item>
+        <item>believe in</item>
+        <item>never forget</item>
+        <item>find</item>
+        <item>value</item>
     </string-array>
 
     <string-array name="substantivesS">
@@ -46,6 +61,8 @@
         <item>road</item>
         <item>path</item>
         <item>freedom</item>
+        <item>chance</item>
+        <item>future</item>
     </string-array>
 
     <string-array name="substantivesP">
@@ -58,5 +75,7 @@
         <item>beliefs</item>
         <item>surroundings</item>
         <item>choices</item>
+        <item>memories</item>
+        <item>people</item>
     </string-array>
 </resources>

@@ -1,11 +1,21 @@
 package com.example.michel.totallyhonestmotivation;
 
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.ImageView;
 import android.content.res.TypedArray;
+import java.io.FileOutputStream;
+
+import java.io.File;
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -23,5 +33,9 @@ public class MainActivity extends AppCompatActivity {
         int choice = (int) (Math.random() * images.length());
         quoteImageView.setImageResource(images.getResourceId(choice, R.drawable.pic1));
         images.recycle();
+    }
+
+    public void saveImage(View view) {
+
     }
 }
