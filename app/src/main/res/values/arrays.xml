@@ -9,6 +9,13 @@
         <item>@drawable/pic6</item>
         <item>@drawable/pic7</item>
         <item>@drawable/pic8</item>
+        <item>@drawable/pic9</item>
+        <item>@drawable/pic10</item>
+        <item>@drawable/pic11</item>
+        <item>@drawable/pic12</item>
+        <item>@drawable/pic13</item>
+        <item>@drawable/pic14</item>
+        <item>@drawable/pic15</item>
     </array>
 
     <string-array name="templates">
@@ -16,11 +23,12 @@
         <item>all you need is a [SubstantivS] and some [SubstantivP]</item>
         <item>your [SubstantivP] are [Adjektiv]</item>
         <item>[Verb] your [SubstantivP]</item>
-        <item>it is a [Adjektiv] [SubstantivS]</item>
+        <item>it is a very [Adjektiv] [SubstantivS]</item>
         <item>there is only one [SubstantivS]</item>
         <item>[Verb] your [SubstantivS], because it is [Adjektiv]</item>
         <item>people are [Adjektiv] and so is your [SubstantivS]</item>
         <item>to [Verb] your [SubstantivP] is [Adjektiv]</item>
+        <item>[Verb] the [Adjektiv] [SubstantivS]</item>
     </string-array>
 
     <string-array name="adjectives">
@@ -49,6 +57,7 @@
         <item>never forget</item>
         <item>find</item>
         <item>value</item>
+        <item>feel</item>
     </string-array>
 
     <string-array name="substantivesS">
