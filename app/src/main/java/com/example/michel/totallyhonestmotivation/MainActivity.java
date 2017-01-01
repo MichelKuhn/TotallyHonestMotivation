@@ -2,6 +2,8 @@ package com.example.michel.totallyhonestmotivation;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.media.MediaScannerConnection;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -58,13 +60,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.GERMAN).format(new Date());
-        File mediaFile;
-            mediaFile = new File(mediaStorageDir.getPath() + File.separator +
-                    "IMG_"+ timeStamp + ".jpg");
-        return mediaFile;
+        return new File(mediaStorageDir.getPath() + File.separator + "IMG_"+ timeStamp + ".jpg");
     }
 
-    private void storeImage(Bitmap image) {
+    private void storeImage(final Bitmap image) {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground( final Void ... params ) {
@@ -76,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 try {
                     FileOutputStream fos = new FileOutputStream(pictureFile);
+                    image.compress(Bitmap.CompressFormat.JPEG, 90, fos);
                     long start = System.nanoTime();
                     byte[] bytes = new byte[32 * 1024];
                     for (long l = 0; l < 500 * 1000 * 1000; l += bytes.length)
@@ -85,6 +85,14 @@ public class MainActivity extends AppCompatActivity {
                     fos.close();
                     long end = System.nanoTime();
                     System.out.printf("Took %.3f seconds to close%n", (end - mid) / 1e9);
+                    MediaScannerConnection.scanFile(MainActivity.this,
+                            new String[] { pictureFile.toString() }, null,
+                            new MediaScannerConnection.OnScanCompletedListener() {
+                                public void onScanCompleted(String path, Uri uri) {
+                                    Log.i("ExternalStorage", "Scanned " + path + ":");
+                                    Log.i("ExternalStorage", "-> uri=" + uri);
+                                }
+                            });
                 } catch (FileNotFoundException e) {
                     Log.d("ERR", "File not found: " + e.getMessage());
                 } catch (IOException e) {
