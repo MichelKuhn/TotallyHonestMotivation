@@ -2,6 +2,7 @@ package com.example.michel.totallyhonestmotivation;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +20,6 @@ import java.util.Date;
 import java.util.Locale;
 import static com.example.michel.totallyhonestmotivation.R.id.imageView;
 
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -31,22 +31,19 @@ public class MainActivity extends AppCompatActivity {
     public void createQuote(View view) {
         QuoteGenerator quoteGenerator = new QuoteGenerator(getApplicationContext());
         TextView quoteTextView = (TextView) findViewById(R.id.quoteView);
-        quoteTextView.setText(quoteGenerator.generateQuote());
         ImageView quoteImageView = (ImageView) findViewById(imageView);
         TypedArray images = getResources().obtainTypedArray(R.array.background);
+        quoteTextView.setText(quoteGenerator.generateQuote());
+
         int choice = (int) (Math.random() * images.length());
         quoteImageView.setImageResource(images.getResourceId(choice, R.drawable.pic1));
         images.recycle();
     }
 
-    public static Bitmap getBitmapFromView(View view, View pictureView) {
-        //Define a bitmap with the same size as the view
+    private static Bitmap getBitmapFromView(View view, View pictureView) {
         Bitmap returnedBitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(),Bitmap.Config.ARGB_8888);
-        //Bind a canvas to it
         Canvas canvas = new Canvas(returnedBitmap);
-        // draw the view on the canvas
         pictureView.draw(canvas);
-        //return the bitmap
         return returnedBitmap;
     }
 
@@ -68,21 +65,39 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void storeImage(Bitmap image) {
-        File pictureFile = getOutputMediaFile();
-        if (pictureFile == null) {
-            Log.d("ERR",
-                    "Error creating media file, check storage permissions: ");// e.getMessage());
-            return;
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(pictureFile);
-            image.compress(Bitmap.CompressFormat.PNG, 90, fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            Log.d("ERR", "File not found: " + e.getMessage());
-        } catch (IOException e) {
-            Log.d("ERR", "Error accessing file: " + e.getMessage());
-        }
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground( final Void ... params ) {
+                File pictureFile = getOutputMediaFile();
+                if (pictureFile == null) {
+                    Log.d("ERR",
+                            "Error creating media file, check storage permissions: ");// e.getMessage());
+                    return null;
+                }
+                try {
+                    FileOutputStream fos = new FileOutputStream(pictureFile);
+                    long start = System.nanoTime();
+                    byte[] bytes = new byte[32 * 1024];
+                    for (long l = 0; l < 500 * 1000 * 1000; l += bytes.length)
+                        fos.write(bytes);
+                    long mid = System.nanoTime();
+                    System.out.printf("Took %.3f seconds to write %,d bytes%n", (mid - start) / 1e9, pictureFile.length());
+                    fos.close();
+                    long end = System.nanoTime();
+                    System.out.printf("Took %.3f seconds to close%n", (end - mid) / 1e9);
+                } catch (FileNotFoundException e) {
+                    Log.d("ERR", "File not found: " + e.getMessage());
+                } catch (IOException e) {
+                    Log.d("ERR", "Error accessing file: " + e.getMessage());
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute( final Void result ) {
+
+            }
+        }.execute();
     }
 
     public void saveMyQuote(View view) {
