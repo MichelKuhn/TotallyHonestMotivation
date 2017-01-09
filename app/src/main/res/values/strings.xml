@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">TotallyHonestMotivation</string>
     <string name="buttonText">Motivate Me!</string>
-    <string name="instructions">Step right up and press the button!</string>
     <string name="saveButtonText">Save me!</string>
+    <string name="shareButtonText">Share me with your fellow people!</string>
 </resources>

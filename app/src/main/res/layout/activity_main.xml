@@ -16,11 +16,9 @@
         android:layout_marginTop="32dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:padding="24dp"/>
+        android:layout_alignParentStart="true"/>
 
     <TextView
-        android:text="@string/instructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -51,4 +49,13 @@
         android:layout_centerHorizontal="true"
         android:onClick="saveMyQuote"
         android:id="@+id/button2" />
+
+    <Button
+        android:text="@string/shareButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:onClick="shareMyQuote"
+        android:id="@+id/button3" />
 </RelativeLayout>
