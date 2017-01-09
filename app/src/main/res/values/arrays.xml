@@ -68,7 +68,7 @@
         <item>life</item>
         <item>way</item>
         <item>journey</item>
-        <item>adventure</item>
+        <item>mission</item>
         <item>time</item>
         <item>road</item>
         <item>path</item>
@@ -90,6 +90,7 @@
         <item>surroundings</item>
         <item>choices</item>
         <item>memories</item>
+        <item>adventures</item>
         <item>people</item>
     </string-array>
 </resources>
