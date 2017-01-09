@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void createQuote(View view) {
-        //RELOAD
         motivation.generateMe();
     }
 

@@ -29,6 +29,7 @@
         <item>people are [Adjektiv] and so is your [SubstantivS]</item>
         <item>to [Verb] your [SubstantivP] is [Adjektiv]</item>
         <item>[Verb] the [Adjektiv] [SubstantivS]</item>
+        <item>always [Verb] your [SubstantivP]</item>
     </string-array>
 
     <string-array name="adjectives">
@@ -44,6 +45,7 @@
         <item>enchanting</item>
         <item>perfect</item>
         <item>bright</item>
+        <item>fascinating</item>
     </string-array>
 
     <string-array name="verbs">
@@ -58,6 +60,7 @@
         <item>find</item>
         <item>value</item>
         <item>feel</item>
+        <item>free</item>
     </string-array>
 
     <string-array name="substantivesS">
@@ -72,10 +75,12 @@
         <item>freedom</item>
         <item>chance</item>
         <item>future</item>
+        <item>time</item>
     </string-array>
 
     <string-array name="substantivesP">
         <item>dreams</item>
+        <item>experiences</item>
         <item>hopes</item>
         <item>goals</item>
         <item>feelings</item>
