@@ -1,5 +1,6 @@
 package com.example.michel.totallyhonestmotivation;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,5 +26,7 @@ public class MainActivity extends AppCompatActivity {
         motivation.saveMe();
     }
 
-    public void shareMyQuote(View view) { }
+    public void shareMyQuote(View view) {
+        startActivity(Intent.createChooser(motivation.shareMe(), "Share Image"));
+    }
 }

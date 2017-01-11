@@ -1,6 +1,7 @@
 package com.example.michel.totallyhonestmotivation;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -12,7 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -21,11 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-/**
- * Created by michel on 02.01.17.
- */
-
-public class Motivation {
+class Motivation {
     private Context context;
     private ImageView imageView;
     private TextView textView;
@@ -34,7 +31,7 @@ public class Motivation {
     private QuoteGenerator generator;
     private TypedArray images;
 
-    public Motivation(Context context, TextView textView, ImageView imageView, View activityView) {
+    Motivation(Context context, TextView textView, ImageView imageView, View activityView) {
         this.context = context;
         this.textView = textView;
         this.imageView = imageView;
@@ -43,7 +40,7 @@ public class Motivation {
         images = context.getResources().obtainTypedArray(R.array.background);
     }
 
-    public void generateMe() {
+    void generateMe() {
         int choice = (int) (Math.random() * images.length());
         imageView.setImageResource(images.getResourceId(choice, R.drawable.pic1));
 
@@ -112,7 +109,26 @@ public class Motivation {
         }.execute();
     }
 
-    public void saveMe() {
+    void saveMe() {
         storeImage(getBitmapFromView(imageView, activityView));
+    }
+
+    Intent shareMe() {
+        Bitmap icon = getBitmapFromView(imageView, activityView);
+        Intent share = new Intent(Intent.ACTION_SEND);
+        share.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        share.setType("image/jpeg");
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        icon.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        File f = new File(Environment.getExternalStorageDirectory() + File.separator + "temporary_file.jpg");
+        try {
+            f.createNewFile();
+            FileOutputStream fo = new FileOutputStream(f);
+            fo.write(bytes.toByteArray());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        share.putExtra(Intent.EXTRA_STREAM, Uri.parse(Environment.getExternalStorageDirectory()+ File.separator + "temporary_file.jpg"));
+        return share;
     }
 }
