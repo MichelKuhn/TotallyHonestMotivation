@@ -112,23 +112,4 @@ class Motivation {
     void saveMe() {
         storeImage(getBitmapFromView(imageView, activityView));
     }
-
-    Intent shareMe() {
-        Bitmap icon = getBitmapFromView(imageView, activityView);
-        Intent share = new Intent(Intent.ACTION_SEND);
-        share.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        share.setType("image/jpeg");
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        icon.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-        File f = new File(Environment.getExternalStorageDirectory() + File.separator + "temporary_file.jpg");
-        try {
-            f.createNewFile();
-            FileOutputStream fo = new FileOutputStream(f);
-            fo.write(bytes.toByteArray());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        share.putExtra(Intent.EXTRA_STREAM, Uri.parse(Environment.getExternalStorageDirectory()+ File.separator + "temporary_file.jpg"));
-        return share;
-    }
 }

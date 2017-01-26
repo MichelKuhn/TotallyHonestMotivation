@@ -25,8 +25,4 @@ public class MainActivity extends AppCompatActivity {
     public void saveMyQuote(View view) {
         motivation.saveMe();
     }
-
-    public void shareMyQuote(View view) {
-        startActivity(Intent.createChooser(motivation.shareMe(), "Share Image"));
-    }
 }

@@ -49,13 +49,4 @@
         android:layout_centerHorizontal="true"
         android:onClick="saveMyQuote"
         android:id="@+id/button2" />
-
-    <Button
-        android:text="@string/shareButtonText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:onClick="shareMyQuote"
-        android:id="@+id/button3" />
 </RelativeLayout>

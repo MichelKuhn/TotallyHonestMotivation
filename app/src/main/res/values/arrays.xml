@@ -49,6 +49,7 @@
         <item>bright</item>
         <item>fascinating</item>
         <item>positive</item>
+        <item>spiritual</item>
         <item>rewarding</item>
     </string-array>
 
@@ -90,6 +91,7 @@
         <item>day</item>
         <item>secret</item>
         <item>mirror</item>
+        <item>house</item>
     </string-array>
 
     <string-array name="substantivesP">
@@ -107,5 +109,6 @@
         <item>adventures</item>
         <item>people</item>
         <item>limits</item>
+        <item>expectations</item>
     </string-array>
 </resources>
