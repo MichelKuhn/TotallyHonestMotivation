@@ -30,7 +30,7 @@
         <item>to [Verb] your [SubstantivP] is [Adjektiv]</item>
         <item>[Verb] the [Adjektiv] [SubstantivS]</item>
         <item>always [Verb] your [SubstantivP]</item>
-        <item>[SubstantivP] [Verb] [SubstantivP]</item>
+        <item>[SubstantivP] always [Verb] a [SubstantivP]</item>
         <item>[Adjektiv] [SubstantivP] [Adjektiv] a [SubstantivS]</item>
     </string-array>
 
