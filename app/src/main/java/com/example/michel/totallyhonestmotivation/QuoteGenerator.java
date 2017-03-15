@@ -1,14 +1,12 @@
 package com.example.michel.totallyhonestmotivation;
 import android.content.Context;
+import android.graphics.Typeface;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.StringTokenizer;
-
-/**
- * Created by michel on 21.12.16.
- */
 
 class QuoteGenerator {
     private static List<String> templates = new ArrayList<>();
@@ -48,5 +46,13 @@ class QuoteGenerator {
 
     String generateQuote() {
         return replaceWords(createTemplate());
+    }
+
+    Typeface generateTypeface() {
+        Typeface[] faces = new Typeface[3];
+        faces[0] = Typeface.DEFAULT;
+        faces[1] = Typeface.SANS_SERIF;
+        faces[2] = Typeface.MONOSPACE;
+        return faces[new Random().nextInt(faces.length)];
     }
 }

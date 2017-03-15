@@ -30,9 +30,9 @@
         <item>to [Verb] your [SubstantivP] is [Adjektiv]</item>
         <item>[Verb] the [Adjektiv] [SubstantivS]</item>
         <item>always [Verb] your [SubstantivP]</item>
-        <item>[SubstantivP] always [Verb] a [SubstantivP]</item>
+        <item>[SubstantivP] always [Verb] a [SubstantivS]</item>
         <item>[Adjektiv] [SubstantivP] [Adjektiv] a [SubstantivS]</item>
-        <item>So many [SubstantivP]</item>
+        <item>so many [SubstantivP]</item>
         <item>[Verb] [SubstantivP]</item>
     </string-array>
 
@@ -83,6 +83,9 @@
         <item>try</item>
         <item>challenge</item>
         <item>change</item>
+        <item>strive for</item>
+        <item>aim for</item>
+        <item>rethink</item>
     </string-array>
 
     <string-array name="substantivesS">
@@ -129,5 +132,7 @@
         <item>people</item>
         <item>limits</item>
         <item>expectations</item>
+        <item>challenges</item>
+        <item>ways</item>
     </string-array>
 </resources>

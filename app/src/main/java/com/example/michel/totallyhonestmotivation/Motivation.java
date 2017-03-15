@@ -27,7 +27,6 @@ class Motivation {
     private ImageView imageView;
     private TextView textView;
     private View activityView;
-    private String quote;
     private QuoteGenerator generator;
     private TypedArray images;
 
@@ -44,8 +43,8 @@ class Motivation {
         int choice = (int) (Math.random() * images.length());
         imageView.setImageResource(images.getResourceId(choice, R.drawable.pic1));
 
-        quote = generator.generateQuote();
-        textView.setText(quote);
+        textView.setTypeface(generator.generateTypeface());
+        textView.setText(generator.generateQuote());
     }
 
     private static Bitmap getBitmapFromView(View view, View pictureView) {
