@@ -32,6 +32,8 @@
         <item>always [Verb] your [SubstantivP]</item>
         <item>[SubstantivP] always [Verb] a [SubstantivP]</item>
         <item>[Adjektiv] [SubstantivP] [Adjektiv] a [SubstantivS]</item>
+        <item>So many [SubstantivP]</item>
+        <item>[Verb] [SubstantivP]</item>
     </string-array>
 
     <string-array name="adjectives">
@@ -51,6 +53,17 @@
         <item>positive</item>
         <item>spiritual</item>
         <item>rewarding</item>
+        <item>convincing</item>
+        <item>stunning</item>
+        <item>alluring</item>
+        <item>dazzling</item>
+        <item>admirable</item>
+        <item>grand</item>
+        <item>magnificent</item>
+        <item>delightful</item>
+        <item>furtive</item>
+        <item>evocative</item>
+        <item>ethereal</item>
     </string-array>
 
     <string-array name="verbs">
@@ -92,6 +105,12 @@
         <item>secret</item>
         <item>mirror</item>
         <item>house</item>
+        <item>leisure</item>
+        <item>labyrinth</item>
+        <item>epiphany</item>
+        <item>essence</item>
+        <item>elixir</item>
+        <item>serendipity</item>
     </string-array>
 
     <string-array name="substantivesP">
