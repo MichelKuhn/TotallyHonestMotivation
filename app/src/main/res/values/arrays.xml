@@ -31,9 +31,10 @@
         <item>[Verb] the [Adjektiv] [SubstantivS]</item>
         <item>always [Verb] your [SubstantivP]</item>
         <item>[SubstantivP] always [Verb] a [SubstantivS]</item>
-        <item>[Adjektiv] [SubstantivP] [Adjektiv] a [SubstantivS]</item>
+        <item>[Verb] [Adjektiv] [SubstantivP] and a [SubstantivS]</item>
         <item>so many [SubstantivP]</item>
         <item>[Verb] [SubstantivP]</item>
+        <item>a [SubstantivS] and [Adjektiv] [SubstantivP]</item>
     </string-array>
 
     <string-array name="adjectives">
@@ -114,6 +115,10 @@
         <item>essence</item>
         <item>elixir</item>
         <item>serendipity</item>
+        <item>patience</item>
+        <item>background</item>
+        <item>involvement</item>
+        <item>maturity</item>
     </string-array>
 
     <string-array name="substantivesP">
@@ -134,5 +139,7 @@
         <item>expectations</item>
         <item>challenges</item>
         <item>ways</item>
+        <item>improvements</item>
+        <item>struggles</item>
     </string-array>
 </resources>
