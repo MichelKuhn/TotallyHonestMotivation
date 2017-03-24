@@ -35,6 +35,8 @@
         <item>so many [SubstantivP]</item>
         <item>[Verb] [SubstantivP]</item>
         <item>a [SubstantivS] and [Adjektiv] [SubstantivP]</item>
+        <item>always [Verb] [SubstantivP]</item>
+        <item>this day is [Adjektiv]</item>
     </string-array>
 
     <string-array name="adjectives">
